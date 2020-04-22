@@ -19,14 +19,14 @@
          "responses": ["I am 10 years old!"],
          "context_set": ""
         },
-        {"tag": "shop",
-         "patterns": ["Id like to buy something", "whats on the menu", "what do you reccommend?", "could i get something to eat"],
-         "responses": ["We sell chocolate chip cookies for $2!", "Cookies are on the menu!"],
+        {"tag": "travel",
+         "patterns": ["Travel"],
+         "responses": ["Have you been outside the country in the past 6 months?"],
          "context_set": ""
         },
-        {"tag": "hours",
-         "patterns": ["when are you guys open", "what are your hours", "hours of operation"],
-         "responses": ["We are open 7am-4pm Monday-Friday!"],
+        {"tag": "cough",
+         "patterns": ["not really", "yes", "no", "frequently"],
+         "responses": ["Have you been experiencing a dry cough?"],
          "context_set": ""
         }
    ]
