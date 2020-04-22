@@ -1,6 +1,29 @@
-import sys
+import nltk
+from nltk.stem.lancaster import LancasterStemmer
+stemmer = LancasterStemmer ()
 
-import apiaccess
+import numpy
+import tflearn
+import tensorflow
+import random
+import json
+
+with open("intents.json") as file:
+    data = json.load(file)
+    
+words = []
+labels = []
+docs = []
+
+for intent in data["intents"]:
+    for pattern in intent["patterns"]:
+        wrds = nltk.word_tokenize(pattern)
+        words.extend(wrds)
+        docs.append(pattern)
+        
+    if intent["tag"] not in labels:
+        labels.append(intent["tag"])
+
 
 
 sex_norm = {
@@ -175,16 +198,3 @@ def summarise_all_evidence(evidence):
     summarise_some_evidence(answered, 'Patient answers')
 
 
-def summarise_diagnoses(diagnoses):
-    print('Diagnoses:')
-    for idx, diag in enumerate(diagnoses):
-        print('{:2}. {:.2f} {}'.format(idx + 1, diag['probability'], diag['name']))
-    print()
-
-
-def summarise_triage(triage_resp):
-    print('Triage level: {}'.format(triage_resp['triage_level']))
-    teleconsultation_applicable = triage_resp.get('teleconsultation_applicable')
-    if teleconsultation_applicable is not None:
-        print('Teleconsultation applicable: {}'.format(teleconsultation_applicable))
-    print()
