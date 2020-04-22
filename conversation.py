@@ -24,7 +24,7 @@ for intent in data["intents"]:
     if intent["tag"] not in labels:
         labels.append(intent["tag"])
 
-
+        
 
 sex_norm = {
     'male': 'male',
@@ -33,16 +33,6 @@ sex_norm = {
     'female': 'female',
     'f': 'female',
     'woman': 'female',
-    'hombre': 'male',
-    'mujer': 'female',
-    'varón': 'male',
-    'varon': 'male',
-    'señor': 'male',
-    'senhor': 'male',
-    'senor': 'male',
-    'señora': 'female',
-    'senora': 'female',
-    'senhora': 'female',
 }
 
 
@@ -58,13 +48,6 @@ answer_norm = {
     'unknown': 'unknown',
     'dont know': 'unknown',
     'don\'t know': 'unknown',
-    'sí': 'present',
-    'si': 'present',
-    'no lo sé': 'unknown',
-    'no lo se': 'unknown',
-    'omitir': 'unknown',
-    'omita': 'unknown',
-    'salta': 'unknown',
 }
 
 
@@ -90,16 +73,6 @@ def read_age_sex():
     agesex = read_input('Patient age and sex (e.g., 30 male)')
     age, sex = agesex.split()
     return int(age), sex_norm[sex.lower()]
-
-
-def read_complaint_portion(auth_string, case_id, context, language_model=None):
-    """Call the /parse endpoint of Infermedica API for the given message or have the user input the message beforehand.
-    """
-    text = read_input('Describe you complaints')
-    if not text:
-        return None
-    resp = apiaccess.call_parse(text, auth_string, case_id, context, language_model=language_model)
-    return resp.get('mentions', [])
 
 
 def mention_as_text(mention):
