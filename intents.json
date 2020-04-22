@@ -6,17 +6,17 @@
         },
         {"tag": "goodbye",
          "patterns": ["cya", "Thank you", "See you later", "Goodbye", "Have a Good day"],
-         "responses": ["Talk to you later", "Goodbye!"],
+         "responses": ["Talk to you later", "Goodbye!, "Have a blessed day!"],
+         "context_set": ""
+         },
+        {"tag": "name",
+         "patterns": ["what is your name", "what's your name?"],
+         "responses": ["You can call me robo"],
          "context_set": ""
         },
         {"tag": "age",
          "patterns": ["what is your age", "how old are you", "age?"],
-         "responses": ["I am x years old!"],
-         "context_set": ""
-        },
-        {"tag": "name",
-         "patterns": ["what is your name", "what should I call you", "whats your name?"],
-         "responses": ["You can call me Tim.", "I'm Tim!", "I'm Tim aka Tech With Tim."],
+         "responses": ["I am 10 years old!"],
          "context_set": ""
         },
         {"tag": "shop",
