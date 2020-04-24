@@ -1,1 +1,1 @@
-This is a COVID-19 symptom-checking chatbot built using TensorFlow and Python code. It will allow users to self identify if they are experiencing symptoms of the virus and if they should seek medical assistance or testing.
+This is a COVID-19 symptom-checking chatbot built written in Python code. It will allow users to self identify if they are experiencing symptoms of the virus and if they should seek medical assistance or testing.
