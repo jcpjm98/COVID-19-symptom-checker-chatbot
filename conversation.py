@@ -173,15 +173,6 @@ def conduct_interview(evidence, age, sex, case_id, auth, language_model=None):
             if observation_value is not None:
                 new_evidence.extend(apiaccess.question_answer_to_evidence(question_item, observation_value))
         else:
-            # You'd need a rich UI to handle group questions gracefully.
-            # There are two types of group questions: "group_single" (radio buttons)
-            # and "group_multiple" (a bunch of single questions gathered under one caption).
-            # Actually you can try asking sequentially for each question item from "group_multiple" question
-            # and then adding the evidence coming from all these answers.
-            # For "group_single" there should be only one present answer. It's recommended to include only this chosen
-            # answer as present symptom in the new evidence.
-            # For more details, please consult:
-            # https://developer.infermedica.com/docs/diagnosis#group_single
             raise NotImplementedError('Group questions not handled in this example')
         # important: always update the evidence gathered so far with the new answers
         evidence.extend(new_evidence)
