@@ -25,10 +25,19 @@ print(contact)
 if yes
 high risk
 
-symptoms = input("Are you experiencing any of the following symptoms: fever, dry cough, sore throat, runny nose ")
+symptoms = input("Are you experiencing any ONE of the following symptoms: fever, cough, sore throat, runny nose, shortness or breath or difficulty breathing, chills, repeated shaking with chills, muscle pain, headache, sore throat, new loss of taste or smell")
 print(fever)
 
 if yes
+low risk
+
+symptoms = input("Are you experiencing TWO OR MORE of the following symptoms: fever, cough, sore throat, runny nose, shortness or breath or difficulty breathing, chills, repeated shaking with chills, muscle pain, headache, sore throat, new loss of taste or smell")
+print(symptoms)
+
+if yes
 high risk
+
+symptomshigh = input("If you are experiencing trouble breathing, persistent pain or pressure in the chest, new confusion or inability to arouse, bluish lips or face - please call 911")
+print(symptomshigh)
 
 Please contact your medical care provider if you are experiencing symptoms and have been judged to be at medium risk for more than 2 questions
