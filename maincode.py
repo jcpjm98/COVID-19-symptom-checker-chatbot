@@ -1,6 +1,6 @@
 print("Welcome to the COVID-19 Symptom Checker! Please answer the following questions with either 'YES' or 'NO' ")
 
-list = (" ")
+list = []
 
 travel = input("Have you recently travelled? ")
 if travel.startswith("y"):
