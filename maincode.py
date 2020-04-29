@@ -51,12 +51,12 @@ if symptoms.startswith("y"):
 else:
     print("minimal to no risk")
     
+print(list)    
 if list >= 14:
     print("Please contact your medical care provider, you are at extremely high risk for having COVID-19.")
-    elif list >= 12:
-        print("Please contact your medical care provider, you are at high risk for having COVID-19."   
-    elif list >= 8:
-        print("Please contact your medical care provider, you are at medium risk for having COVID-19.")
- else:
-     print("you are at low to minimal risk for having COVID-19. There is no need at the moment to contact your medical care provider.")
-
+elif list >= 12:
+    print("Please contact your medical care provider, you are at high risk for having COVID-19.")
+elif list >= 8:
+    print("Please contact your medical care provider, you are at medium risk for having COVID-19.")
+else:
+    print("you are at low to minimal risk for having COVID-19. There is no need at the moment to contact your medical care provider.")
